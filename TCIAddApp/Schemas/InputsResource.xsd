@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1588734366565" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1588734366565">
+  <complexType name="InputsElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="FirstNumber" type="integer"/>
+      <element maxOccurs="1" minOccurs="0" name="SecondNumber" type="integer"/>
+    </sequence>
+  </complexType>
+  <element name="InputsElement" type="tns:InputsElementType"/>
+</schema>

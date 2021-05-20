@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_Kk_qMI76Eeqz-M0RdgfaBg" targetNamespace="http://tns.tibco.com/bw/composite/TCIAddApp" name="TCIAddApp" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_A5g8YI9HEeqz-M0RdgfaBg" name="add" promote="ComponentProcess/add">
+    <sca:interface.wsdl xmi:id="_A5oRII9HEeqz-M0RdgfaBg" interface="http://xmlns.example.com/20200505232932PLT#wsdl.interface(add)" scaext:wsdlLocation="../Processes/tciaddapp/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_A5w0AI9HEeqz-M0RdgfaBg" name="RestService" path="/add" docBasePath="http://localhost:7777/TCIAddApp" docResourcePath="Resource" basePath="/" connector="tciaddapp.Resource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/tciaddapp.Process-Resource.json">
+      <operation xmi:id="_A51FcI9HEeqz-M0RdgfaBg" operationName="post" nickname="post-add" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_A6J1kI9HEeqz-M0RdgfaBg"/>
+      <advancedConfig xmi:id="_A5w0AY9HEeqz-M0RdgfaBg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_A51FcY9HEeqz-M0RdgfaBg" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_LyQukI76Eeqz-M0RdgfaBg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_LycUwI76Eeqz-M0RdgfaBg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_LylesI76Eeqz-M0RdgfaBg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Lyn68I76Eeqz-M0RdgfaBg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_LyxE4I76Eeqz-M0RdgfaBg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Ly_HUI76Eeqz-M0RdgfaBg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_rjPQcI9IEeqz-M0RdgfaBg" name="Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_LQ2qoI76Eeqz-M0RdgfaBg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_LQ68EI76Eeqz-M0RdgfaBg" processName="tciaddapp.Process"/>
+    <sca:service xmi:id="_A5bc0I9HEeqz-M0RdgfaBg" name="add">
+      <sca:interface.wsdl xmi:id="_A5cq8I9HEeqz-M0RdgfaBg" interface="http://xmlns.example.com/20200505232932PLT#wsdl.interface(add)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
